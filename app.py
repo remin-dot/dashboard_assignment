@@ -56,4 +56,5 @@ def update_graphs(selected_species):
     return scatter, line, bar
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    # `run_server` was replaced by `run` in newer Dash versions
+    app.run(debug=True)
