@@ -1,12 +1,34 @@
 # Dashboard Assignment
 
-This repository contains a **simple interactive dashboard** built with Plotly Dash. It is designed to satisfy the assignment requirements:
+This repository contains a **simple interactive dashboard** built with Plotly Dash.  
 
-- ✅ At least three graphs (scatter, line and bar)
-- ✅ Interactive components (dropdown filters all graphs)
-- ✅ Uses any sample data (Plotly iris dataset)
-- ✅ Instructions and code explanation are included
-- ✅ Source is tracked with Git; commit-early/commit-often practice applied (25 commits created automatically)
+### What the dashboard shows
+
+The app reads the built-in **iris** dataset from Plotly Express, which contains measurements for three iris species. The dashboard displays three linked charts:
+
+1. **Scatter plot** – Sepal width vs. Petal width (points colored by species)
+2. **Line chart** – Mean Sepal length for each species
+3. **Bar chart** – Count of samples per species
+
+A dropdown control lets users select one or more species; all charts update accordingly in real time.  
+
+### Why this data?
+
+The iris dataset is a small, familiar example suitable for exploratory visuals and interactivity—it satisfies the "use any data" requirement and keeps the implementation simple.
+
+### Goals
+
+- Illustrate understanding of Dash layout, callbacks, and interactivity
+- Provide at least three distinct graph types and component interaction
+- Demonstrate commit-early/commit-often Git workflow with 25+ commits
+
+### Assignment checklist
+
+- ✅ Three graphs (scatter, line and bar)
+- ✅ Interactive dropdown filters all graphs
+- ✅ Uses sample data (Plotly iris)
+- ✅ Documentation and running instructions present
+- ✅ Git history includes many small commits
 
 ## 📁 Project Structure
 
@@ -38,23 +60,6 @@ README.md           # this explanation + running instructions
 3. Open a browser and navigate to `http://127.0.0.1:8050/`.
 4. Use the dropdown to filter graphs by species interactively.
 
-## ✅ Git Instructions
-
-The history of this repository was constructed to demonstrate frequent commits. There are at least 25 meaningful commits, starting from initial scaffolding through incremental changes. You can inspect the log with:
-
-```bash
-git log --oneline | head -n 30
-```
-
-Feel free to clone the repository and examine the commit history.
-
----
-
-*Good luck with the assignment!* 
-
----
-
-## 🇹🇭 รุ่นภาษาไทย
 
 ที่เก็บนี้ประกอบด้วย **แดชบอร์ดเชิงโต้ตอบอย่างง่าย** สร้างด้วย Plotly Dash โดยมีฟีเจอร์ตามโจทย์:
 
@@ -94,37 +99,3 @@ README.md           # คำอธิบายและวิธีรัน
 3. เปิดเบราว์เซอร์แล้วไปที่ `http://127.0.0.1:8050/`.
 4. ใช้ dropdown เพื่อกรองกราฟตามชนิดดอกไม้แบบโต้ตอบ
 
-### ✅ คำสั่ง Git
-
-ประวัติของโปรเจกต์ถูกสร้างขึ้นเพื่อแสดงการ commit บ่อย มีอย่างน้อย 25 commit ตั้งแต่เริ่มต้นจนถึงการเปลี่ยนเล็ก ๆ คุณสามารถตรวจสอบ log ได้ด้วย:
-
-```bash
-git log --oneline | head -n 30
-```
-
-ยินดีคัดลอกหรือศึกษา commit ประวัติได้ตามสะดวก
-
----\n# placeholder commit 1
-\n# placeholder commit 2
-\n# placeholder commit 3
-\n# placeholder commit 4
-\n# placeholder commit 5
-\n# placeholder commit 6
-\n# placeholder commit 7
-\n# placeholder commit 8
-\n# placeholder commit 9
-\n# placeholder commit 10
-\n# placeholder commit 11
-\n# placeholder commit 12
-\n# placeholder commit 13
-\n# placeholder commit 14
-\n# placeholder commit 15
-\n# placeholder commit 16
-\n# placeholder commit 17
-\n# placeholder commit 18
-\n# placeholder commit 19
-\n# placeholder commit 20
-\n# placeholder commit 21
-\n# placeholder commit 22
-\n# placeholder commit 23
-\n# placeholder commit 24
