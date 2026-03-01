@@ -10,7 +10,7 @@ app = dash.Dash(__name__)
 
 # layout with dropdown and three graphs
 app.layout = html.Div([
-    html.H1("แดชบอร์ดเชิงโต้ตอบอย่างง่าย"),
+    html.H1("แดชบอร์ดเพื่อวิเคราะห์ข้อมูลดอกไม้ Iris", style={"textAlign": "center"}),
     dcc.Dropdown(
         id="species-dropdown",
         options=[{"label": s, "value": s} for s in df["species"].unique()],
