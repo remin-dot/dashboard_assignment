@@ -10,13 +10,13 @@ app = dash.Dash(__name__)
 
 # layout with dropdown and three graphs
 app.layout = html.Div([
-    html.H1("Simple Interactive Dashboard"),
+    html.H1("แดชบอร์ดเชิงโต้ตอบอย่างง่าย"),
     dcc.Dropdown(
         id="species-dropdown",
         options=[{"label": s, "value": s} for s in df["species"].unique()],
         value=df["species"].unique().tolist(),
         multi=True,
-        placeholder="Select species"
+        placeholder="เลือกชนิดดอกไม้"
     ),
     dcc.Graph(id="scatter-graph"),
     dcc.Graph(id="line-graph"),
@@ -41,17 +41,17 @@ def update_graphs(selected_species):
     scatter = px.scatter(filtered,
                          x="sepal_width", y="petal_width",
                          color="species",
-                         title="Sepal width vs Petal width")
+                         title="ความกว้างของ Sepal เทียบกับ Petal")
 
     # line: mean sepal length by species
     line_data = filtered.groupby("species")["sepal_length"].mean().reset_index()
     line = px.line(line_data, x="species", y="sepal_length",
-                   title="Average Sepal Length by Species")
+                   title="ความยาวเฉลี่ยของ Sepal ตามชนิด")
 
     # bar: count of samples per species
     bar_data = filtered["species"].value_counts().reset_index()
     bar_data.columns = ["species", "count"]
-    bar = px.bar(bar_data, x="species", y="count", title="Sample Count by Species")
+    bar = px.bar(bar_data, x="species", y="count", title="จำนวนตัวอย่างตามชนิด")
 
     return scatter, line, bar
 
