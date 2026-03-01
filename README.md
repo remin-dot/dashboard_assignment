@@ -50,7 +50,61 @@ Feel free to clone the repository and examine the commit history.
 
 ---
 
-*Good luck with the assignment!*\n# placeholder commit 1
+*Good luck with the assignment!* 
+
+---
+
+## 🇹🇭 รุ่นภาษาไทย
+
+ที่เก็บนี้ประกอบด้วย **แดชบอร์ดเชิงโต้ตอบอย่างง่าย** สร้างด้วย Plotly Dash โดยมีฟีเจอร์ตามโจทย์:
+
+- ✅ มีกราฟอย่างน้อยสามตัว (scatter, line, bar)
+- ✅ มีส่วนประกอบโต้ตอบ (dropdown กรองกราฟทุกตัว)
+- ✅ ใช้ข้อมูลตัวอย่างใดก็ได้ (ชุดข้อมูล iris ของ Plotly)
+- ✅ มีคำอธิบายโค้ดและวิธีรัน
+- ✅ ติดตามประวัติใน Git โดยใช้หลัก Commit Early/Commit Often (สร้าง commit ไว้ 25 อันโดยอัตโนมัติ)
+
+### 📁 โครงสร้างโปรเจกต์
+
+```
+app.py              # แอป Dash หลัก
+requirements.txt    # ไลบรารี Python ที่ต้องติดตั้ง
+README.md           # คำอธิบายและวิธีรัน
+```
+
+### 🧠 อธิบายโค้ด
+
+- **app.py** นำเข้า Dash สร้างเลย์เอาต์ที่มี dropdown และสาม `dcc.Graph` และกำหนด callback เพื่ออัปเดตกราฟทั้งหมดตามชนิดดอกไม้ที่เลือกจากชุดข้อมูล iris
+- callback จะกรองข้อมูลแล้วสร้าง:
+  1. กราฟกระจาย (sepal width vs petal width)
+  2. กราฟเส้นแสดงความยาว sepal เฉลี่ยตามชนิด
+  3. กราฟแท่งนับจำนวนตัวอย่างแต่ละชนิด
+- ความโต้ตอบมาจากส่วนประกอบ `dcc.Dropdown`; การเลือกชนิดต่าง ๆ จะอัปเดตกราฟทั้งสามพร้อมกัน
+
+### 🚀 การรันแดชบอร์ด
+
+1. ติดตั้งไลบรารี (แนะนำใช้ virtual environment):
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. เริ่มเซิร์ฟเวอร์:
+   ```bash
+   python app.py
+   ```
+3. เปิดเบราว์เซอร์แล้วไปที่ `http://127.0.0.1:8050/`.
+4. ใช้ dropdown เพื่อกรองกราฟตามชนิดดอกไม้แบบโต้ตอบ
+
+### ✅ คำสั่ง Git
+
+ประวัติของโปรเจกต์ถูกสร้างขึ้นเพื่อแสดงการ commit บ่อย มีอย่างน้อย 25 commit ตั้งแต่เริ่มต้นจนถึงการเปลี่ยนเล็ก ๆ คุณสามารถตรวจสอบ log ได้ด้วย:
+
+```bash
+git log --oneline | head -n 30
+```
+
+ยินดีคัดลอกหรือศึกษา commit ประวัติได้ตามสะดวก
+
+---\n# placeholder commit 1
 \n# placeholder commit 2
 \n# placeholder commit 3
 \n# placeholder commit 4
