@@ -18,8 +18,11 @@ app.layout = html.Div([
         multi=True,
         placeholder="เลือกชนิดดอกไม้"
     ),
+    html.P("กราฟกระจายแสดงความสัมพันธ์ระหว่างความกว้างของ Sepal กับความกว้างของ Petal", style={"fontStyle": "italic"}),
     dcc.Graph(id="scatter-graph"),
+    html.P("กราฟเส้นแสดงความยาวเฉลี่ยของ Sepal แต่ละชนิด", style={"fontStyle": "italic"}),
     dcc.Graph(id="line-graph"),
+    html.P("กราฟแท่งแสดงจำนวนตัวอย่างในแต่ละชนิดของดอกไม้", style={"fontStyle": "italic"}),
     dcc.Graph(id="bar-graph"),
 ])
 
